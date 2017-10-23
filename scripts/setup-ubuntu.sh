@@ -44,12 +44,17 @@ function setupUtilities {
     apt-get install -y ant
     apt-get install -y unzip
     apt-get install -y python-minimal
+    apt-get install --upgrade -y python-pip
+    pip install --upgrade pip
+    apt-get install -y libx11-dev
 }
 
 echo "setup ubuntu"
 
 echo "setup hosts file"
 setupHosts
+
+apt-get update
 
 echo "setup ssh"
 installSSHPass

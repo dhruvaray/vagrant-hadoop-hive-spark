@@ -9,7 +9,7 @@ JAVA_MYSQL_CONNECTOR_DOWNLOAD=http://central.maven.org/maven2/mysql/mysql-connec
 # hadoop
 HADOOP_PREFIX=/usr/local/hadoop
 HADOOP_CONF=$HADOOP_PREFIX/etc/hadoop
-HADOOP_VERSION=hadoop-2.7.3
+HADOOP_VERSION=hadoop-2.7.4
 HADOOP_ARCHIVE=$HADOOP_VERSION.tar.gz
 HADOOP_MIRROR_DOWNLOAD=http://archive.apache.org/dist/hadoop/core/$HADOOP_VERSION/$HADOOP_ARCHIVE
 HADOOP_RES_DIR=/vagrant/resources/hadoop
@@ -25,6 +25,7 @@ HIVE_RES_DIR=/vagrant/resources/hive
 HIVE_CONF=/usr/local/hive/conf
 HIVE_PREFIX=/usr/local/hive
 HIVE_EXEC_JAR=${HIVE_PREFIX}/lib/hive-exec-${HIVE_VERSION}.jar
+
 
 # spark
 SPARK_VERSION=spark-2.1.1
@@ -80,6 +81,10 @@ ZEPPELIN_ARCHIVE=${ZEPPELIN_RELEASE}.tgz
 ZEPPELIN_MIRROR_DOWNLOAD=http://www-eu.apache.org/dist/zeppelin/zeppelin-${ZEPPELIN_VERSION}/${ZEPPELIN_ARCHIVE}
 ZEPPELIN_RES_DIR=/vagrant/resources/zeppelin
 ZEPPELIN_TARGET=/home/ubuntu
+
+
+#phantomjs
+PHANTOMJS_VERSION=1.9.8
 
 
 # Utility functions
