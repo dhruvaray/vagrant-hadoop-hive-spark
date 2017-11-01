@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     for p in 4040..4045
         config.vm.network :forwarded_port, guest: p, host: p
     end
+    config.vm.box_download_insecure = true
     config.vm.define  "node#{i}" do |node|
         node.vm.box = "ubuntu/xenial64"
 	config.vm.define :node1 do |t|
@@ -24,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.hostname = "node1"
         node.vm.provision "shell", path: "scripts/setup-ubuntu.sh"
         node.vm.provision "shell", path: "scripts/setup-java.sh"
- 	    node.vm.provision "shell", path: "scripts/setup-mysql.sh"
+ 	node.vm.provision "shell", path: "scripts/setup-mysql.sh"
         node.vm.provision "shell", path: "scripts/setup-hadoop.sh"
         node.vm.provision "shell", path: "scripts/setup-hive.sh"
         node.vm.provision "shell", path: "scripts/setup-spark.sh"
